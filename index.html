@@ -1,1 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SHAKEZ redefines milkshakes with vegan, low-sugar ube and fruit flavors. Good Mood. Great Taste. #ILoveShakez">
+    <title>SHAKEZ - Redefining Milkshakes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Futura', 'Arial', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
 
+        body {
+            background-color: #FFFFFF;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #805B87;
+            color: #FFFFFF;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #A293B3;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(128, 91, 135, 0.8), rgba(128, 91, 135, 0.8)), url('https://via.placeholder.com/1920x1080?text=Muted+Purple+Stripes');
+            background-size: cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            background-color: #A293B3;
+            color: #FFFFFF;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #FFFFFF;
+            color: #805B87;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #805B87;
+            margin-bottom: 1.5rem;
+        }
+
+        section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        ol {
+            max-width: 800px;
+            margin: 1rem auto;
+            text-align: left;
+            list-style-position: inside;
+        }
+
+        ol li {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #A293B3;
+            color: #333;
+        }
+
+        th {
+            background-color: #805B87;
+            color: #FFFFFF;
+        }
+
+        td {
+            background-color: #F9F9F9;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .menu-item {
+            background-color: #FFFFFF;
+            border: 1px solid #A293B3;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item h3 {
+            color: #805B87;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p {
+            font-size: 1rem;
+        }
+
+        footer {
+            background-color: #805B87;
+            color: #FFFFFF;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #A293B3;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p, section p, th, td, .menu-item p, ol li {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .hero-content p, section p, ol li {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SHAKEZ</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#ube">Ube</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#retail">Retail</a></li>
+                <li><a href="#vision">Vision</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>SHAKEZ - Redefining Milkshakes</h1>
+            <p>I'm Mohamed Sheikh. As a kid, I was teased and called "Milkshake." That inspired SHAKEZ, a vegan, low-sugar milkshake brand with ube and natural fruit flavors. All the flavor of a milkshake. None of the sugar crash. Like Starbucks redefined coffee, we’re owning the milkshake and ube space with bold, healthy innovation. Good Mood. Great Taste. SHAKEZ. #ILoveShakez</p>
+            <a href="#menu" class="cta-button">Discover SHAKEZ</a>
+        </div>
+    </section>
+
+    <!-- Ube Section -->
+    <section id="ube">
+        <h2>Ube - Our Signature</h2>
+        <p>Ube, a creamy, subtly sweet Philippine delicacy, is the heart of SHAKEZ’s iconic purple vibe. Our vegan, low-sugar milkshakes use natural sugars from fruits and ube jam—add sugar if you want it sweeter! We’re redefining the ube space with unforgettable flavors. Good Mood. Great Taste. SHAKEZ.</p>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store">
+        <h2>Our Stores</h2>
+        <p>Step into our sleek, purple-hued stores and enjoy vegan, low-sugar milkshakes made with natural, lactose-free powdered milk bases for pure flavor and health benefits.</p>
+        <table>
+            <tr>
+                <th>Milk Base</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>WholeZ</td>
+                <td>Rich, creamy dairy</td>
+            </tr>
+            <tr>
+                <td>Semi-SkimmedZ</td>
+                <td>Light, smooth dairy</td>
+            </tr>
+            <tr>
+                <td>OatZ</td>
+                <td>Smooth, plant-based</td>
+            </tr>
+            <tr>
+                <td>AlmondZ</td>
+                <td>Nutty, light</td>
+            </tr>
+            <tr>
+                <td>GoatZ</td>
+                <td>Tangy dairy</td>
+            </tr>
+            <tr>
+                <td>CamelZ</td>
+                <td>Exotic, sweet</td>
+            </tr>
+            <tr>
+                <td>PeaZ</td>
+                <td>High-protein</td>
+            </tr>
+            <tr>
+                <td>CoconutZ</td>
+                <td>Tropical, creamy</td>
+            </tr>
+            <tr>
+                <td>Water Base</td>
+                <td>Ultra-light</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <p>Customize your vegan, low-sugar milkshake with our barista steps. Every flavor uses natural sugars from fruits and ube jam, crafted for moods like focus, calm, or energy, served hot or cold. All the flavor of a milkshake. None of the sugar crash. Add sugar for extra sweetness. Ingredients are samples and may change. Good Mood. Great Taste. SHAKEZ.</p>
+
+        <!-- Barista Steps -->
+        <h3>How to SHAKEZ</h3>
+        <ol>
+            <li><strong>Milk Base</strong>: Pick your lactose-free base.</li>
+            <li><strong>Flavors + Ube</strong>: Choose a mood-driven flavor, with or without ube.</li>
+            <li><strong>Size</strong>: Select MiniZ, ClassicZ, or MaxZ.</li>
+            <li><strong>Thickness</strong>: Opt for LowZ (coffee-like), MediumZ, or HighZ.</li>
+            <li><strong>Toppings</strong>: Add strawberry, chocolate, or more.</li>
+            <li><strong>Options</strong>: Choose hot/cold, espresso, or adaptogens.</li>
+        </ol>
+        <p>Your perfect SHAKEZ milkshake awaits!</p>
+
+        <!-- Flavors -->
+        <h3>Mood-Driven Flavors</h3>
+        <p>Meet Ube DreamZ, our signature milkshake: blueberry, vanilla, ube jam, oat milk base, LowZ thickness—a creamy, vibrant masterpiece that shocks with every sip. All flavors are vegan, nut-free, and crafted to taste amazing with ube and milkshakes.</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Mood</th>
+                <th>Ingredients</th>
+            </tr>
+            <tr>
+                <td>Ube DreamZ (SignatureZ)</td>
+                <td>Calm</td>
+                <td>Blueberry, vanilla, ube jam</td>
+            </tr>
+            <tr>
+                <td>LightZ</td>
+                <td>Focus</td>
+                <td>Mango, ginseng, ube jam</td>
+            </tr>
+            <tr>
+                <td>ChillZ</td>
+                <td>Calm</td>
+                <td>Blueberry, passionfruit, vanilla, ube jam</td>
+            </tr>
+            <tr>
+                <td>PowerZ</td>
+                <td>Energy</td>
+                <td>Strawberry, chocolate, ube jam</td>
+            </tr>
+            <tr>
+                <td>CreamZ</td>
+                <td>Nostalgia</td>
+                <td>Strawberry, vanilla, ube jam</td>
+            </tr>
+            <tr>
+                <td>ThickZ</td>
+                <td>Dessert</td>
+                <td>Chocolate, mango, ube jam</td>
+            </tr>
+        </table>
+
+        <!-- Benefits -->
+        <h3>Why It Works</h3>
+        <p>Our flavors boost your mood with vegan, low-sugar ingredients, inspired by science for health and taste.</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Mood</th>
+                <th>Benefit</th>
+            </tr>
+            <tr>
+                <td>Ube DreamZ</td>
+                <td>Calm</td>
+                <td>Blueberries and vanilla promote relaxation with natural calming compounds.</td>
+            </tr>
+            <tr>
+                <td>LightZ</td>
+                <td>Focus</td>
+                <td>Mango and ginseng enhance mental clarity with natural sugars and focus-boosting compounds.</td>
+            </tr>
+            <tr>
+                <td>ChillZ</td>
+                <td>Calm</td>
+                <td>Blueberries and passionfruit reduce stress with natural calming compounds.</td>
+            </tr>
+            <tr>
+                <td>PowerZ</td>
+                <td>Energy</td>
+                <td>Strawberries and chocolate provide an energy boost with natural vitamins and sugars.</td>
+            </tr>
+            <tr>
+                <td>CreamZ</td>
+                <td>Nostalgia</td>
+                <td>Strawberry and vanilla evoke comforting, familiar vibes.</td>
+            </tr>
+            <tr>
+                <td>ThickZ</td>
+                <td>Dessert</td>
+                <td>Chocolate and mango deliver a rich, satisfying treat with natural sweetness.</td>
+            </tr>
+        </table>
+
+        <!-- Sizes -->
+        <h3>Sizes</h3>
+        <div class="menu-grid">
+            <div class="menu-item"><h3>MiniZ</h3><p>250ml</p></div>
+            <div class="menu-item"><h3>ClassicZ</h3><p>400ml</p></div>
+            <div class="menu-item"><h3>MaxZ</h3><p>600ml</p></div>
+        </div>
+
+        <!-- Thickness Levels -->
+        <h3>Thickness Levels</h3>
+        <p>LowZ is drinkable like a coffee—crisp and refreshing. SHAKEZ makes milkshakes a healthy daily ritual.</p>
+        <div class="menu-grid">
+            <div class="menu-item"><h3>LowZ</h3><p>Like a coffee</p></div>
+            <div class="menu-item"><h3>MediumZ</h3><p>Creamy, balanced</p></div>
+            <div class="menu-item"><h3>HighZ</h3><p>Spoonable, indulgent</p></div>
+        </div>
+
+        <!-- Add-Ons -->
+        <h3>Add-Ons</h3>
+        <div class="menu-grid">
+            <div class="menu-item"><h3>Espresso</h3><p>Fresh shot for extra energy</p></div>
+            <div class="menu-item"><h3>Adaptogens</h3><p>Mood enhancers</p></div>
+            <div class="menu-item"><h3>Toppings</h3><p>Strawberry, chocolate, whipped coconut cream, sprinkles, marshmallows, ube crisps</p></div>
+        </div>
+
+        <!-- Espresso -->
+        <h3>Espresso</h3>
+        <p>Add a single espresso shot (80mg caffeine) for energy—baristas ask every customer to opt in or out! Choose FreeZ (no espresso) or ExtraZ (double shot, 160mg). Perfect for adults, optional for kids and teens.</p>
+
+        <!-- Celebrity Collabs -->
+        <h3>Celebrity Collabs</h3>
+        <table>
+            <tr>
+                <th>Artist</th>
+                <th>Milkshake</th>
+                <th>Flavor</th>
+            </tr>
+            <tr>
+                <td>Central Cee</td>
+                <td>DripZ</td>
+                <td>Caramel, chocolate, ube jam</td>
+            </tr>
+            <tr>
+                <td>Dua Lipa</td>
+                <td>LightZ Crystal</td>
+                <td>Passionfruit, vanilla, ube jam</td>
+            </tr>
+            <tr>
+                <td>Skepta</td>
+                <td>ThickZ Noir</td>
+                <td>Chocolate, chili, ube jam</td>
+            </tr>
+            <tr>
+                <td>Little Simz</td>
+                <td>ChillZ Dream</td>
+                <td>Blueberry, vanilla, ube jam</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Retail Section -->
+    <section id="retail">
+        <h2>Retail Powders</h2>
+        <p>Our vegan, low-sugar, ube-enhanced powders in tubs or sachets let you create healthy milkshakes or yogurt at home. Available at supermarkets and restaurant chains. Good Mood. Great Taste. SHAKEZ.</p>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision">
+        <h2>Our Vision</h2>
+        <p>SHAKEZ is here to dominate the milkshake and ube space, transforming milkshakes into a healthy daily ritual with vegan, low-sugar flavors from fruits and ube jam. With lactose-free bases, vending machines, seasonal ube ice cream, and a sleek, purple vibe, we’re scaling globally to rival coffee chains and make SHAKEZ the go-to for bold, feel-good flavors. All the flavor of a milkshake. None of the sugar crash. Good Mood. Great Taste. SHAKEZ. #ILoveShakez</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SHAKEZ. Redefining milkshakes.</p>
+        <p><a href="https://x.com/shakez">X</a> | <a href="https://instagram.com/shakez">Instagram</a> | <a href="mailto:info@shakez.com">Contact</a></p>
+    </footer>
+</body>
+</html>
